@@ -1,0 +1,393 @@
+/* Importing the font for headings */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+/* Resetting to default */
+body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+/* Font specified for the titles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+}
+/* Font for all the others texts */
+p, span, div, a, li, td, th {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+/* Anchor details */
+
+a{
+    text-decoration: none;;
+}
+
+a:hover{
+    color: #df1010
+}
+
+/* Text decorations */
+
+.especial-anchor{
+    text-decoration: underline;
+
+}
+
+.bold{
+    font-weight: 800;
+}
+.semibold{
+    font-weight: 600;
+}
+
+.white{
+    color: white;    
+    line-height: 20px;
+}
+
+.white:hover{
+    font-size: 18px;
+    color: #e4e4e4;
+    transition: 0.2s;
+}
+
+.red{
+    color: #ab3c3c;
+}
+
+.text-large{
+    line-height: 40px;
+    font-size: 45px;
+
+
+}
+
+.text-medium{
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.paragrahp-text{
+    color: rgb(68, 68, 68);
+    font-size: 17px;
+}
+.paragrahp-smaller{
+    color: rgb(68, 68, 68);
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.gap{
+    display: flex;
+    gap: 20px;
+}
+
+/* Firts container / default */
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+/* Ensuring that either row or column the max width stays the same and never reach the full width */
+.max-width{
+    display: flex;
+    width: 80%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.max-width-column{
+    display: flex;
+    width: 80%;
+    padding: 0 20px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+/* background color */
+.blue-bg{
+    background-color: #314b57;
+}
+
+/* First section specifics and some reused classes */
+/* left part of the section */
+.left-container{
+ 
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: inherit;
+    flex-wrap: wrap;
+}
+/* right part of the section */
+.right-container{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: inherit;
+    flex-wrap: wrap;
+}
+
+/* the whole services */
+.services-container{
+
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* each service */
+.service{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.image-service{
+    width: 150px;
+}
+
+
+.map-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Second section specifics */
+.smaller{
+    width: 30%!important;
+    display: flex;
+
+}
+
+.bigger{
+    width: 70%!important;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-img{
+    width: 100%;
+}
+
+.flex-end{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.service-img{
+    padding-bottom: 15px;
+}
+
+/* third section specifics */
+
+.padding{
+    padding-top: 60px;
+    padding-bottom: 30px; 
+}
+
+.article-img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.article-one{
+    display: flex;
+    flex: 1 1 30%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.articles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+
+/* All media queries to achieve a responsive design */
+
+/* Ensuring proper responsive in Tvs */
+
+@media (min-width: 2289px) {
+    .left-container{
+        flex-direction: column;
+    }
+}
+
+/* Changing the size for some specific images to maintain the layout */
+@media (min-width: 1160px) and (max-width: 1392px) {
+    .image-service{
+        width: 120px;
+    }
+}
+
+@media (min-width: 897px) and (max-width: 1159px) {
+    .image-service{
+        width: 80px;
+    }
+}
+
+@media (min-width: 619px) and (max-width: 896px) {
+
+    .image-service{
+        width: 100px;
+    }
+
+
+}
+
+@media (max-width: 619px){
+    .image-service{
+        width: 80px;
+    }
+}
+
+/* Second section, adjust image to fit text. */
+
+@media (max-width: 895px){
+
+    .service-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .container, .left-container{
+        align-items: stretch;
+    }
+
+    .text-large{
+        font-size: 25px;
+    }
+
+}
+
+
+/* Starts mobile */
+@media (min-width: 367px) and (max-width: 545px) {
+
+    /* Section 1, adjust the image sizes */
+    .image-service{
+        width: 130px;
+    }
+
+
+}
+
+/* some changes to the first section to be mobile friendly */
+@media (min-width: 301px) and (max-width: 366px) {
+
+    .mobile-title{
+        font-size: 12px;
+    }
+
+    .services-container{
+        justify-content: space-around;
+    }
+    .text-medium{
+        font-size: 17px;
+    }
+}
+
+
+/* This is a default to ensure proper visibility even outside the common range */
+@media (max-width: 300px){
+    
+    .image-service{
+        width: 60px;
+    }
+}
+
+/* Changing the direction for the second section to a column */
+@media (max-width: 896px) {
+
+    .text-medium{
+        text-align: center;
+        padding-bottom: 5px;
+    }
+
+    .services-container{
+        padding-bottom: 10px;
+    }
+
+.max-width{
+    flex-direction: column;
+}
+.left-container{
+    width: 100%;
+}
+.right-container{
+    width: 100%;    
+    align-items: center;
+}
+
+
+
+}
+
+
+@media (max-width: 545px){
+
+    /* Section 2, reorganize row in column */
+        .container{
+            flex-direction: column;
+        }
+        .right-container{
+            justify-content: center;
+        }
+        .bigger, .smaller{
+            width: unset!important;
+        }
+        .justify{
+            text-align: justify;
+        }
+
+            /* third section, reorganize content */
+    
+        .articles{
+            flex-direction: column;
+        }
+}
+
+
+/* Animation for third section */
+.animation-container{
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* adding the hover to the images in this container */
+.animation-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* creating the animation*/
+.animation-container img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
